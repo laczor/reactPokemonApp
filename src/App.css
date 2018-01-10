@@ -47,10 +47,6 @@ button.PokeList-item.list-group-item{
   font-size: 35px;
 }
 
-#Modal .custom-modal .modal-dialog{
-  width: 60% !important;
-  margin: 0 auto !important;
-}
 .modal-footer{
   text-align: center;
 }

@@ -1,21 +1,23 @@
 import React from 'react';
 import { Radar } from 'react-chartjs';
 
+//This is in order to capitalize the labels
 let capitalize =(string)=>{
 return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
+//ES6 component creation function, which will recieve  pokemono object
 const PokemonInfo = ({pokemon})=>{
-	console.log(pokemon);
-	const labels = pokemon.stats.map(info=>{
+	// console.log(pokemon);
+	const labels = pokemon.stats.map(info=>{				//Will loop through the labels
 		return capitalize(info.stat.name)
 	})
 
-	const dataPokemon = pokemon.stats.map(info=>{
+	const dataPokemon = pokemon.stats.map(info=>{			//Will loop through on the statistic
 		return info.base_stat;
 	})
 
-	let chartData = {
+	let chartData = {										//Creating the chartData object for chartJs
 		labels: labels,
 		datasets:[{
 			labels: labels,
@@ -28,7 +30,7 @@ const PokemonInfo = ({pokemon})=>{
 			pointHoverBorderColor:"rgba(255,99,123,1)",
 		}],
 	}
-	let chartOptions = {
+	let chartOptions = {									//Creating the chartData object for chartJs works only with chartjs2
 	  scale: {
 	    pointLabels: {
 	      fontSize: 40
