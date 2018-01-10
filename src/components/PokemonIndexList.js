@@ -2,6 +2,7 @@ import React from 'react';
 import SelectItemsPerPageButtons from './SelectItemsPerPageButtons';
 import PaginationContainer from './PaginationContainer';
 import PokeList from './PokeList';
+import { Col } from 'react-bootstrap/lib/';
 
 //ES6 extended class which will create html tags
 //Instead of having them in the main component we are having these values here,
@@ -19,11 +20,23 @@ const PokemonIndexList = ({display, options, selectedValue, allValue, onOptionSe
 
   return (
     <div style={style} >
+
+       <div>
+        <Col sm={12}>
+            <h4>Item per Page</h4>
+        </Col>
+      </div>
       <SelectItemsPerPageButtons
         options={options}
         selectedValue={selectedValue}
         allValue={allValue}
         onOptionSelected={onOptionSelected} />
+
+       <div>
+        <Col sm={12}>
+            <h2>Select your pokemon</h2>
+        </Col>
+      </div>
 
       <PokeList
         listOfPokemon={listOfPokemon}

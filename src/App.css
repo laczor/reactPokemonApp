@@ -9,13 +9,16 @@
 
 .App-header {
   background-color: #222;
-  height: 150px;
+  height: 180px;
   padding: 20px;
   color: white;
 }
 
 .App-intro {
   font-size: large;
+}
+#itemPerPage{
+  margin-bottom: 25px;
 }
 
 .PokeList-item {
@@ -39,5 +42,15 @@ button.PokeList-item.list-group-item{
 }
 #contained-modal-title{
   text-transform: capitalize;
+  text-align: center;
+  font-weight: 600;
+  font-size: 35px;
+}
+
+#Modal .custom-modal .modal-dialog{
+  width: 60% !important;
+  margin: 0 auto !important;
+}
+.modal-footer{
   text-align: center;
 }

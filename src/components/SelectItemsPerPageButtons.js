@@ -4,7 +4,7 @@ import {Button, Col} from 'react-bootstrap/lib/';
 const SelectItemsPerPageButtons = ({options, onOptionSelected, selectedValue, allValue}) => {
   console.log(options);
   return (
-    <Col sm={12} >
+    <Col id="itemPerPage" sm={12} >
       {options.map((option) => {
         return <Button key={option} onClick={onOptionSelected} bsStyle={selectedValue === option ? 'primary' : 'default'}>{option}</Button>
       })}

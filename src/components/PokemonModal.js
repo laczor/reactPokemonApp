@@ -7,8 +7,10 @@ import PokemonInfo from './PokemonInfo';
 const PokemonModal = ({toggleModal,showModal,pokemon})=> {
 		console.log(pokemon);
 		return (
-			<div>
+			<div >
 				<Modal
+					bsSize={"lg"}
+					dialogClassName="custom-modal"
 					show={showModal}
 					onHide={toggleModal}
 					container={this}

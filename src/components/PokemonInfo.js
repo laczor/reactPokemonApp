@@ -18,6 +18,7 @@ const PokemonInfo = ({pokemon})=>{
 	let chartData = {
 		labels: labels,
 		datasets:[{
+			labels: labels,
 			data: dataPokemon,
 			fillColor: "rgba(255,99,123,0.2)",
 			strokeColor: "rgba(255,99,123,1)",
@@ -25,13 +26,27 @@ const PokemonInfo = ({pokemon})=>{
 			pointBorderColor: "#fff",
 			pointHoverBackgroundColor: "#fff",
 			pointHoverBorderColor:"rgba(255,99,123,1)",
-		}]
+		}],
+	}
+	let chartOptions = {
+	  scale: {
+	    pointLabels: {
+	      fontSize: 40
+	    }
+	  },
+	}
 
-	};
 	return(
-		<div class="Aligner">
-			<img class="Aligner-item"src={pokemon.sprites.front_default} alt="pokemon-front"/>
-			<Radar class="Aligner-item" data={chartData} width="300" height="250"/>
+		<div>
+			<div className="Aligner">
+				<img class="Aligner-item"src={pokemon.sprites.front_default} alt="pokemon-front"/>
+				<img class="Aligner-item"src={pokemon.sprites.back_default} alt="pokemon-front"/>
+				<img class="Aligner-item"src={pokemon.sprites.front_shiny} alt="pokemon-front"/>
+				<img class="Aligner-item"src={pokemon.sprites.back_shiny} alt="pokemon-front"/>
+			</div>
+			<div className="Aligner">
+				<Radar class="Aligner-item" data={chartData} options={chartOptions} width="450" height="400"/>
+			</div>
 		</div>
 		)
 
